@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orders</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>s.no</th>
+        <th>product name</th>
+        <th>quantity</th>
+    </tr>
+    {% for key,value,qun in orders %}
+    <tr>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+        <td>{{qun}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

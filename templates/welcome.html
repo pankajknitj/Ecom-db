@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome-Go cart</title>
+</head>
+<body>
+    <h3>Welcome {{user.name}}</h3>
+    
+    {% if user.is_seller=="Yes" %}
+        <form action="/addproduct" method="POST">
+            <button type="submit" name="add"> Add more products</button>
+        </form>
+    {% endif %}
+    <form action="/orders" method="POST">
+        <button type="submit">my orders</button>
+    </form>
+    <div align="right">
+        <form action="/logout" method="POST">
+            <button type="submit" name="logout">logout</button>
+        </form>
+    </div>
+    <hr>
+    <div align="center">
+        {% for i,n,p,im in product %}
+        <img src="{{url_for('static',filename=im)}}" alt="loading" width="300" height="250"><br>
+        <p>rs:{{p}}</p>
+        <p>{{n}}</p>
+        <form action="/buy" method="POST">
+            <button type="submit" name="item" value={{i}}>Buy</button><br>
+        </form>
+        
+        {% endfor %}
+    </div>
+    <hr> 
+    
+</body>
+</html>

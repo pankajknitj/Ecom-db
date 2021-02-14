@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+</head>
+<body>
+    <!-- brand,category,depart,price,name,seasson_to_wear, type,description,image,item_avl -->
+    <form action="/addproduct" method="POST">
+        <div>
+            <label for="brand">Brand</label>
+            <input type="text" name="brand" id="brand" placeholder="ex:jockey">
+        </div>
+        <br>
+        <div>
+            <label for="cat">Category</label>
+            <input type="text" name="cat" id="cat" placeholder="ex:clothing">
+        </div>
+        <br>
+        <div>
+            <label for="depart">Depart</label>
+            <input type="text" name="depart" id="depart" placeholder="ex:male">
+        </div>
+        <br>
+        <div>
+            <label for="price">Cost per piece</label>
+            <input type="text" name="price" id="price" placeholder="ex:1000">
+        </div>
+        <br>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="ex:cotton jeans">
+        </div>
+        <br>
+        <div>
+            <label for="seasson">Seasson</label>
+            <input type="text" name="seasson" id="seasson" placeholder="ex:winter">
+        </div>
+        <br>
+        <div>
+            <label for="type">type</label>
+            <input type="text" name="type" id="type" placeholder="ex:inner wear">
+        </div>
+        <br>
+        <div>
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" >
+        </div>
+        <br>
+        <div>
+            <label for="item_avl">Number of items available</label>
+            <input type="number" name="item_avl" id="item_avl" placeholder="ex:200">
+        </div>
+        <br>
+        <input type="file" name="img" accept="image/*">
+        <br>
+        <input type="submit" value="ADD">
+            
+    </form>
+</body>
+</html>
